@@ -1,5 +1,5 @@
 // Lista de contactos predefinidos
-const contactList = ["John florez", "Diana gomez"];
+const contactList = ["John florez", "Diana gomez", "Sara Camargo"];
 
 // Función para añadir un nuevo contacto a la lista
 function addContact(contactName) {
