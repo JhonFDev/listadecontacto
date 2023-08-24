@@ -34,6 +34,22 @@ function eliminarContacto(contactoAEliminar) {
   contactList = nuevaLista;
 }
 
+// Función para actualizar un contacto existente en la lista
+function actualizarContacto(contactoAActualizar) {
+  // Find the item of the contact to update
+  let item = contactList.findIndex(
+    (contact) => contact.id === contactoAActualizar.id
+  );
+
+  // Actualizar el contacto con los nuevos valores
+  if (item !== -1) {
+    contactList[item].nombre = contactoAActualizar.nombre;
+    contactList[item].apellido = contactoAActualizar.apellido;
+    contactList[item].location = contactoAActualizar.location;
+  }
+}
+
+
 // Función para imprimir los contactos presentes en la lista
 function imprimirlistadecontactos() {
   console.log(contactList);
@@ -48,6 +64,17 @@ let contactNew = {
     address: "mzn 1 - piso 1",
   },
 };
+// actualizar contacto con id 1
+let updatedContact = {
+  id: 1,
+  nombre: "porgas",
+  apellido: "d dragon",
+  location: {
+    city: "fortaleza",
+    address: "desconocida",
+  },
+};
+
 
 console.log(contactNew.nombre);
 // Borrar un contacto existente
@@ -60,3 +87,7 @@ aggContact(contactNew);
 imprimirlistadecontactos();
 // Imprimir contactos después de borrar uno
 // printContacts();
+
+actualizarContacto(updatedContact);
+
+console.log(contactList);
