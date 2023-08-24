@@ -50,13 +50,9 @@ let contactNew = {
 };
 
 console.log(contactNew.nombre);
-// Borrar un contacto existente
 
-// Añadir un nuevo contacto
 eliminarContacto(2);
 aggContact(contactNew);
-// Imprimir contactos después de añadir uno nuevo
-// imprimirlistadecontactos();
+
 imprimirlistadecontactos();
-// Imprimir contactos después de borrar uno
-// printContacts();
+
